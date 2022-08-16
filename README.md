@@ -10,6 +10,9 @@ dotnet restore
 # Run
 dotnet run --project SlotsApi\
 
+# Debug
+Hit F5 (should already have tasks.json setup)
+
 # VS Code Setup
 
 If using VS Code, make sure to have:
