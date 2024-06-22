@@ -1,3 +1,7 @@
-narrator/node_modules
-react17/node_modules
-react18/node_modules
+hostapp/node_modules
+react17demo/node_modules
+react18demo/node_modules
+
+hostapp/dist
+react17demo/dist
+react18demo/dist
