@@ -156,14 +156,62 @@ main.js:500 Uncaught (in promise) TypeError: fn is not a function
 
 ## COnverting the app to typescript react
 
-4. To create a react app after, I first installed typescript
+4. To create a react app after, first install typescript
 `npm install --save-dev typescript`
 
 Created a tsconfig.json file via `npx tsc --init`
 
-Rename index.js file to index.ts
+Rename `index.js` file to `index.ts`
 
 Create
+For React17
 `npm install react@17 react-dom@17`
 
+For React18
+`npm install react react-dom`
+
+Then install typescript types for react and react-dom (Regardless of version)
+`npm install --save-dev @types/react @types/react-dom`
+
+
+Then regardless of type, install babel
 `npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript`
+
+At the bottom of the tsconfig.json file, add:
+```
+    "include": ["src"]
+```
+
+Now that we've got babel, update index.ts to index.tsx
+
+Add a .babelrc file
+```
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"]
+}
+```
+
+Then update webpack.config.js to find typescript
+```
+entry: "./src/index.tsx",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        use: "babel-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+```
