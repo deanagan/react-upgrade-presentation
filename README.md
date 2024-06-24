@@ -1,4 +1,9 @@
-# React: A Migration Story... From React17 to React18
+# React: From React17 to React18
+
+This is a presentation showing my notes on upgrading React17 to React18.
+
+I've setup the project so that React17 and React18 are running as microfrontends, thus
+easier to show a live difference between the 2.
 
 
 ## Installed Packages - setting up the microfrontends
