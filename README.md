@@ -159,7 +159,14 @@ main.js:500 Uncaught (in promise) TypeError: fn is not a function
     at async Promise.all (:8080/index 0)
 ```
 
-## COnverting the app to typescript react
+## Adding eslint
+`npm install --save-dev eslint`
+Add config
+`npx eslint --init`
+
+Optional: Add `prettier` to the configuration
+
+## Converting the app to typescript react
 
 1. To create a react app after, first install typescript
 `npm install --save-dev typescript`
