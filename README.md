@@ -164,8 +164,9 @@ main.js:500 Uncaught (in promise) TypeError: fn is not a function
 Add config
 `npx eslint --init`
 
-Optional: Add `prettier` to the configuration
 
+Optional: Add `prettier` to the configuration
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier`
 ## Converting the app to typescript react
 
 1. To create a react app after, first install typescript
