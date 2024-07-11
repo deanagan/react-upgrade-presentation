@@ -35,6 +35,7 @@ module.exports = {
       exposes: {
         "./React18DemoIndex": "./src/index",
       },
+      shared: ["faker"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

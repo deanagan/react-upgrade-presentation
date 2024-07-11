@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "lint:fix": "eslint **/*.{js,mjs,cjs,ts,jsx,tsx} --fix",
+    "lint:format": "prettier --write 'src/**/*.{js,mjs,cjs,ts,jsx,tsx}'"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "prettier": "^3.3.2",
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
@@ -25,13 +26,16 @@
     "@types/react-dom": "^18.3.0",
     "babel-loader": "^9.1.3",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.3",
     "globals": "^15.6.0",
+    "html-webpack-plugin": "5.5.0",
+    "prettier": "^3.3.2",
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.14.1",
     "webpack": "5.88.0",
     "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.7.4",
-    "html-webpack-plugin": "5.5.0"
+    "webpack-dev-server": "4.7.4"
   }
 }
